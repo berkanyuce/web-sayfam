@@ -6,7 +6,7 @@ const Skills = ({ skillsData, bodyClassName }) => {
     const skillsTextColor = bodyClassName === 'dark' ? "text-white" : "text-gray-500"
     return (
       <div className={`skills ${backgroundColor} text-2xl p-8 flex flex-row items-center justify-center`}>
-      <h2 className={`text-4xl ${headerTextColor} font-bold w-4/12`}>{skillsData.titles[0]}</h2>
+      <h2 className={`text-3xl ${headerTextColor} font-bold w-4/12`}>{skillsData.titles[0]}</h2>
       <div className="grid grid-cols-2 gap-4 m-0 mt-4">
         {skillsData.skills.map((skill) => (
           <div key={skill.id} className={`flex items-center p-4 ${skillsTextColor} text-lg m-0`}>

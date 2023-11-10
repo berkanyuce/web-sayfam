@@ -40,7 +40,7 @@ const en =
                 "id" : 1,
                 "alt" : "Python",
                 "img-link" : "https://img.icons8.com/color/100/000000/python--v1.png"
-            },
+            },              
             {
                 "id" : 2,
                 "alt" : "React",

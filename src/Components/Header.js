@@ -32,7 +32,7 @@ const Header = ({ language, changeLanguage, data, toggleDarkMode, bodyClassName 
                         ))}
                     </div>
                 </div>
-                <div className="header-image w-1/4 h-4/5 rounded-full bg-cover shadow-2xl" style={{ backgroundImage: `url('https://media.licdn.com/dms/image/D4D03AQEOoH86mzdO9A/profile-displayphoto-shrink_800_800/0/1680165324377?e=2147483647&v=beta&t=i-NcUCkhlJ2KcazfbfGVcOLgh5zULPky-66NeRvVu_0')` }}></div>
+                <div className="header-image w-1/4 h-4/5 rounded-xl bg-cover shadow-2xl" style={{ backgroundImage: `url('https://media.licdn.com/dms/image/D4D03AQEOoH86mzdO9A/profile-displayphoto-shrink_800_800/0/1680165324377?e=2147483647&v=beta&t=i-NcUCkhlJ2KcazfbfGVcOLgh5zULPky-66NeRvVu_0')` }}></div>
             </div>
         </div>
     );

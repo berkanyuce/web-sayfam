@@ -14,7 +14,6 @@ function App() {
   const data = language === "tr" ? tr : en;
 
   useEffect(() => {
-    // Sayfa yüklendiğinde, localStorage'daki dil tercihini kontrol et
     const savedLanguage = localStorage.getItem("language");
     if (savedLanguage) {
       setLanguage(savedLanguage);
@@ -22,9 +21,7 @@ function App() {
   }, []);
 
   const changeLanguage = () => {
-    // Dil değiştikçe burada uygun dil kodunu (örneğin "tr" veya "en") ayarlayabilirsiniz.
     setLanguage(language === "tr" ? "en" : "tr");
-    // Dil değiştikçe localStorage'da da güncelle
     localStorage.setItem("language", language === "tr" ? "en" : "tr");
   };
   
@@ -34,9 +31,10 @@ function App() {
     useEffect(() => {
       axios
         .get(language === "tr" 
-            ? "https://run.mocky.io/v3/d724151f-f62e-4a0a-a608-e8e5a02c431a" 
-            : "https://run.mocky.io/v3/89cd7d2a-794a-4af3-af0d-0bddaf92b500")
+            ? "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4" 
+            : "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4")
         .then((response) => {
+          //console.log(response.data);
           setData(response.data);
         })
         .catch((error) => {
@@ -44,17 +42,21 @@ function App() {
         });
     }, [language]);
 
-    
+    /////
     
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    // Dark modu etkinleştirme / devre dışı bırakma işlevi
     const toggleDarkMode = () => {
       setIsDarkMode(!isDarkMode);
     };
 
+    
+
     const bodyClassName = isDarkMode ? 'dark' : '';
 
+    if (data === null) {
+      return <div>Loading...</div>; 
+    }
     return (
       <>
         <Header
@@ -73,3 +75,5 @@ function App() {
 }
 
 export default App;
+
+
