@@ -17,13 +17,13 @@ const Profile = ({ profileData, bodyClassName }) => {
 
   return (
     <div className={`${backgroundColor} text-green-100 flex flex-col items-center justify-center pl-8 pr-8 pt-16 pb-16`}>
-      <h2 className="text-3xl text-left w-8/12 mb-4 text-custom-green font-bold">{profileData.titles[1]}</h2>
-      <div className="flex profile-content w-8/12 items-center">
-        <div className="flex flex-col w-1/4">
+      <h2 className="text-3xl lg:text-left text-center lg:w-8/12 mb-4 text-custom-green font-bold">{profileData.titles[1]}</h2>
+      <div className="flex profile-content w-8/12 items-center lg:flex-row flex-col">
+        <div className="flex flex-col p-4">
           <h2 className="col-span-2 text-2xl items-center mb-4 text-white">{basicInfoHeaders[0]}</h2>
           <div>
             {basicInfoData.map((data, index) => (
-              <div key={index} className="flex justify-between items-center mb-4">
+              <div key={index} className="flex justify-between items-center mb-4 ml-0 mr-0 mt-0">
                 <div className="text-custom-green ml-0">{data.header}</div>
                 <div className="text-white mr-0">{data.value}</div>
               </div>
@@ -32,11 +32,11 @@ const Profile = ({ profileData, bodyClassName }) => {
         </div>
 
 
-        <div className="profile-img flex-1 flex items-center justify-center mx-4">
+        <div className="profile-img flex-1 flex items-center justify-center mx-4 hidden lg:block">
           <img
             src="https://media.licdn.com/dms/image/C4E22AQFcz-wiTjIxHg/feedshare-shrink_800/0/1674122752546?e=2147483647&v=beta&t=OO9C5VuFHVuILsadqtGDkMtALKmEEEx51xzQrJIDyi4"
             alt="Resim Açıklaması"
-            className="rounded-lg shadow-2xl bg-cover"
+            className="rounded-lg shadow-2xl bg-cover "
           />
         </div>
         <div className="profile-about-me flex-1 text-left p-4 text-white">

@@ -39,42 +39,42 @@ const en =
             {
                 "id" : 1,
                 "alt" : "Python",
-                "img-link" : "https://img.icons8.com/color/100/000000/python--v1.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/35d9cb385020ee3bf1059ba78b89903158abd8db/src/img/python.png"
             },              
             {
                 "id" : 2,
                 "alt" : "React",
-                "img-link" : "https://img.icons8.com/officel/100/000000/react.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/react.png"
             },
             {
                 "id" : 3,
                 "alt" : "SQL",
-                "img-link" : "https://img.icons8.com/external-flat-juicy-fish/100/000000/external-sql-coding-and-development-flat-flat-juicy-fish.png" 
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/sql.png" 
             },
             {
                 "id" : 4,
                 "alt" : "Machine Learning",
-                "img-link" : "https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-machine-learning-robotics-flaticons-flat-flat-icons.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/machinelearning.png"
             },
             {
                 "id" : 5,
                 "alt" : "Deep Learning",
-                "img-link" : "https://img.icons8.com/external-becris-flat-becris/100/external-deep-learning-artificial-intelligence-becris-flat-becris.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/deeplearning.png"
             },
             {
                 "id" : 6,
                 "alt" : "JAVA",
-                "img-link" : "https://img.icons8.com/color/100/java-coffee-cup-logo--v1.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/java.png"
             },
             {
                 "id" : 7,
                 "alt" : "JavaScript",
-                "img-link" : "https://img.icons8.com/color/100/javascript--v1.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/javascript.png"
             },
             {
                 "id" : 8,
                 "alt" : "Spring Boot",
-                "img-link" : "https://img.icons8.com/color/100/spring-logo.png"
+                "img-link" : "https://raw.githubusercontent.com/berkanyuce/web-sayfam/main/src/img/spring.png"
             },
         ],
 

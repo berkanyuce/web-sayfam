@@ -11,11 +11,11 @@ const Projects = ({ projectData, bodyClassName }) => {
 
   return (
     <div className={`${backgroundColor} flex flex-col items-center justify-around p-8`}>
-      <h2 className={`text-3xl text-left w-8/12 mb-8 ${headerTextColor} font-bold`}>{projectData.titles[3]}</h2>
+      <h2 className={`text-3xl sm:text-left text-center w-8/12 mb-8 ${headerTextColor} font-bold`}>{projectData.titles[3]}</h2>
       <div className="flex projects-content w-3/4 flex-col items-center space-y-4">
         {projectData.projects.map((project, index) => (
-          <div className={`flex project w-11/12 ${projectBackgroundColor} rounded-lg shadow-2xl`} key={index}>
-            <div className="project-img w-1/4 h-auto rounded-l-md bg-cover" style={{ backgroundImage: `url(${project["project-img"]})` }}></div>
+          <div className={`flex project w-11/12 mb-8 ${projectBackgroundColor} rounded-lg shadow-2xl`} key={index}>
+            <div className="project-img w-1/4 rounded-l-md bg-contain bg-center	bg-no-repeat m-4 hidden sm:block" style={{ backgroundImage: `url(${project["project-img"]})` }}></div>
             <div className="project-details flex-1 py-8 px-8">
               <h3 className={`text-2xl ${projectHeaderTextColor} font-bold mb-4`}>{project["project-header"]}</h3>
               <span className={`${projectTextColor}`}>{project["project-content"]}</span>
