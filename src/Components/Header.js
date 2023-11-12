@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { LanguageContext } from "../Contexts/LanguageContext";
 
-const Header = ({ language, changeLanguage, data, toggleDarkMode, bodyClassName }) => {
+const Header = ({ changeLanguage, data, toggleDarkMode, bodyClassName }) => {
+    const language = useContext(LanguageContext)
     const backgroundColor = bodyClassName === 'dark' ? "dark:bg-dark-blue" : "bg-custom-blue"
     const logoBackgroundColor = bodyClassName === 'dark' ? "dark:bg-dark-grey" : "bg-white"
     const logoTextColor = bodyClassName === 'dark' ? "text-white" : "text-custom-blue"
@@ -10,10 +12,10 @@ const Header = ({ language, changeLanguage, data, toggleDarkMode, bodyClassName 
             <div className="flex sm:flex-row flex-col justify-between p-4 m-auto w-8/12">
                 <a className="text-2xl m-0 text-center sm:text-left">{data.nav.name}</a>
                 <div className="flex items-center space-x-4 m-0">
-                    <span onClick={changeLanguage} className="cursor-pointer">
+                    <span onClick={changeLanguage} className="cursor-pointer max-sm:text-center">
                         {language === "tr" ? "Dil Değiştir" : "Change Language"}
                     </span>
-                    <span className=" text-custom-green px-4 py-2 rounded-md" onClick={toggleDarkMode}>
+                    <span className=" text-custom-green px-4 py-2 rounded-md max-sm:text-center" onClick={toggleDarkMode}>
                         Dark Mode: {bodyClassName == "dark" ? 'On' : 'Off'}
                     </span>
 

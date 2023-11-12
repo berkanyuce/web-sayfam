@@ -19,7 +19,7 @@ const Profile = ({ profileData, bodyClassName }) => {
     <div className={`${backgroundColor} text-green-100 flex flex-col items-center justify-center pl-8 pr-8 pt-16 pb-16`}>
       <h2 className="text-3xl lg:text-left text-center lg:w-8/12 mb-4 text-custom-green font-bold">{profileData.titles[1]}</h2>
       <div className="flex profile-content w-8/12 items-center lg:flex-row flex-col">
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 pl-0">
           <h2 className="col-span-2 text-2xl items-center mb-4 text-white">{basicInfoHeaders[0]}</h2>
           <div>
             {basicInfoData.map((data, index) => (

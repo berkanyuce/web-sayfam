@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Skills from "./Components/Skills";
@@ -9,8 +9,13 @@ import en from "./Data/en";
 import tr from "./Data/tr";
 import axios from "axios";
 
+import {LanguageContext} from "./Contexts/LanguageContext"
+
 function App() {
-  const [language, setLanguage] = useState(localStorage.getItem("language") || "tr");
+  //const [language, setLanguage] = useState(localStorage.getItem("language") || "tr");
+  const { language, setLanguage } = useContext(LanguageContext);
+
+  
   const data = language === "tr" ? tr : en;
 
   useEffect(() => {
@@ -28,29 +33,32 @@ function App() {
   //axios ama çalışmıyor
   const [data1, setData] = useState(null);
 
-    useEffect(() => {
-      axios
-        .get(language === "tr" 
-            ? "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4" 
-            : "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4")
-        .then((response) => {
-          //console.log(response.data);
-          setData(response.data);
-        })
-        .catch((error) => {
-          console.error("Veri alınamadı: ", error);
-        });
-    }, [language]);
+  useEffect(() => {
+    axios
+      .get(language === "tr" 
+          ? "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4" 
+          : "https://run.mocky.io/v3/3b19ae2f-fc03-4912-932c-5c5dd959eba4")
+      .then((response) => {
+        //console.log(response.data);
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Veri alınamadı: ", error);
+      });
+  }, [language]);
 
     /////
-    
-    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const initialDarkMode = localStorage.getItem('isDarkMode') === 'true' || false;
+    const [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
+
+    useEffect(() => {
+      localStorage.setItem('isDarkMode', isDarkMode.toString());
+    }, [isDarkMode]);
 
     const toggleDarkMode = () => {
       setIsDarkMode(!isDarkMode);
     };
-
-    
 
     const bodyClassName = isDarkMode ? 'dark' : '';
 
@@ -60,7 +68,6 @@ function App() {
     return (
       <>
         <Header
-          language={language}
           changeLanguage={changeLanguage}
           data={data.header}
           toggleDarkMode={toggleDarkMode}
@@ -75,5 +82,3 @@ function App() {
 }
 
 export default App;
-
-
